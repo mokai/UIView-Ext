@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (Ext)
-
+/**
+ *  视图坐标扩展
+ */
+@interface UIView (Position)
 
 #pragma mark location
 - (CGPoint)origin;//return self.frame.origin
@@ -35,6 +37,10 @@
 -(CGFloat)right;
 -(void)setRight:(CGFloat)right;//return self.left+self.width
 
+#pragma mark The distance from the starting point of the screen
+- (CGFloat)screenTop;
+- (CGFloat)screenLeft;
+- (CGRect)screenFrame;
 
 #pragma mark view center
 -(CGFloat)centerHorizontalWithSubView:(UIView *)subView;//According to the width of the View to calculate the horizontal center starting point in the self
@@ -46,8 +52,20 @@
 -(void)addSubViewToHorizontalCenter:(UIView *)subView;
 -(void)addSubViewToVerticalCenter:(UIView *)subView;
 
-#pragma mark The distance from the starting point of the screen
-- (CGFloat)screenTop;
-- (CGFloat)screenLeft;
-- (CGRect)screenFrame;
+
 @end
+
+/**
+ *  视图层次扩展
+ */
+@interface UIView (ZOrder)
+-(int)getSubviewIndex;
+-(void)bringToFront;
+-(void)sendToBack;
+-(void)bringOneLevelUp;
+-(void)sendOneLevelDown;
+-(BOOL)isInFront;
+-(BOOL)isAtBack;
+-(void)swapDepthsWithView:(UIView*)swapView;
+@end
+
