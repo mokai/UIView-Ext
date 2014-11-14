@@ -29,15 +29,15 @@ UIView-Ext(视图扩展)
 ```
 
 ###3、边缘对齐增加视图
-
+```Objective-C
       -(void)addSubViewToLeftAlign:(UIView *)subView
       -(void)addSubViewToRightAlign:(UIView *)subView
       -(void)addSubViewToTopAlign:(UIView *)subView
       -(void)addSubViewToBottomAlign:(UIView *)subView
-
+```
 
 ###4、视图层次相关
-
+```Objective-C
       当前视图在父视图中的位置
       -(int)getSubviewIndex
       
@@ -61,3 +61,4 @@ UIView-Ext(视图扩展)
       
       交换层次
       -(void)swapDepthsWithView:(UIView*)swapView
+```
