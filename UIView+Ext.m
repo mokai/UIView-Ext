@@ -158,7 +158,7 @@
 }
 
 -(CGPoint)centerWithSubView:(UIView *)subView{
-    return CGPointMake([self centerHorizontalWithSubView:subView],[self centerVerticalWithSubView:self]);
+    return CGPointMake([self centerHorizontalWithSubView:subView],[self centerVerticalWithSubView:subView]);
 }
 
 /**
