@@ -67,5 +67,6 @@
 -(BOOL)isInFront;
 -(BOOL)isAtBack;
 -(void)swapDepthsWithView:(UIView*)swapView;
+-(void)removeAllSubView;//清空所有子视图
 @end
 

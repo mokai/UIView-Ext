@@ -266,4 +266,14 @@
 {
     [self.superview exchangeSubviewAtIndex:[self getSubviewIndex] withSubviewAtIndex:[swapView getSubviewIndex]];
 }
+
+/**
+ *  清空所有子视图
+ */
+-(void)removeAllSubView{
+    for(UIView *view in [self subviews])
+    {
+        [view removeFromSuperview];
+    }
+}
 @end
