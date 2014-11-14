@@ -28,6 +28,7 @@ UIView-Ext(视图扩展)
 
 
 3、边缘对齐增加视图
+
       -(void)addSubViewToLeftAlign:(UIView *)subView
       -(void)addSubViewToRightAlign:(UIView *)subView
       -(void)addSubViewToTopAlign:(UIView *)subView
@@ -35,6 +36,7 @@ UIView-Ext(视图扩展)
 
 
 4、视图层次相关
+
       当前视图在父视图中的位置
       -(int)getSubviewIndex
       
