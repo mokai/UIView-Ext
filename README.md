@@ -14,7 +14,7 @@ UIView-Ext(视图扩展)
       。screenLeft<br>
 
 ###2、视图居中相关
-
+```OC
       根据传入的子视图与当前视图计算出水平中心开始点
       -(CGFloat)centerHorizontalWithSubView:(UIView *)subView;   
 
@@ -26,7 +26,7 @@ UIView-Ext(视图扩展)
       -(void)addSubViewToCenter:(UIView *)subView
       -(void)addSubViewToHorizontalCenter:(UIView *)subView
       -(void)addSubViewToVerticalCenter:(UIView *)subView
-
+```
 
 ###3、边缘对齐增加视图
 
