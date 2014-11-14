@@ -1,7 +1,6 @@
 UIView-Ext(视图扩展)
 ==========
 
-
 1、位置frame扩展<br>
       。top       
       。left<br>
@@ -12,7 +11,6 @@ UIView-Ext(视图扩展)
       。height<br>
       。screenTop       离屏幕的位置<br/>
       。screenLeft<br>
-
 
 2、视图居中相关<br>
 
