@@ -1,7 +1,8 @@
 UIView-Ext(视图扩展)
 ==========
 
-1、位置frame扩展<br>
+###1、位置frame扩展
+
       。top       
       。left<br>
       。right<br>
@@ -12,7 +13,7 @@ UIView-Ext(视图扩展)
       。screenTop       离屏幕的位置<br/>
       。screenLeft<br>
 
-2、视图居中相关<br>
+###2、视图居中相关
 
       根据传入的子视图与当前视图计算出水平中心开始点
       -(CGFloat)centerHorizontalWithSubView:(UIView *)subView;   
