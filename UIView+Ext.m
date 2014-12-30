@@ -19,18 +19,15 @@
     return self.frame.origin;
 }
 
-
 - (void)setOrigin:(CGPoint)origin {
     CGRect frame = self.frame;
     frame.origin = origin;
     self.frame = frame;
 }
 
-
 - (CGSize)size {
     return self.frame.size;
 }
-
 
 - (void)setSize:(CGSize)size {
     CGRect frame = self.frame;
@@ -72,13 +69,11 @@
     return self.frame.origin.y + self.frame.size.height;
 }
 
-
 - (void)setBottom:(CGFloat)bottom {
     CGRect frame = self.frame;
     frame.origin.y = bottom - frame.size.height;
     self.frame = frame;
 }
-
 
 -(CGFloat)width{
     return self.frame.size.width;
@@ -108,13 +103,11 @@
     CGFloat x = 0;
     for (UIView *view = self; view; view = view.superview){
         x += view.left;
-        
         if ([view isKindOfClass:[UIScrollView class]]){
             UIScrollView *scrollView = (UIScrollView*)view;
             x -= scrollView.contentOffset.x;
         }
     }
-    
     return x;
 }
 
@@ -125,7 +118,6 @@
     CGFloat y = 0;
     for (UIView *view = self; view; view = view.superview){
         y += view.top;
-        
         if ([view isKindOfClass:[UIScrollView class]]){
             UIScrollView *scrollView = (UIScrollView*)view;
             y -= scrollView.contentOffset.y;
@@ -134,35 +126,33 @@
     return y - [UIApplication sharedApplication].statusBarFrame.size.height;
 }
 
-
 - (CGRect)screenFrame {
     return CGRectMake(self.screenLeft, self.screenTop, self.width, self.height);
 }
 
-
 #pragma mark 视图居中相关
 /**
  *  根据传入的子视图与当前视图计算出水平中心开始点
- *
  */
 -(CGFloat)centerHorizontalWithSubview:(UIView *)subview{
     return self.width/2 - subview.width/2;
 }
 /**
  *  根据传入的子视图与当前视图计算出垂直中心开始点
- *
  */
 -(CGFloat)centerVerticalWithSubview:(UIView *)subview{
     return self.height/2 - subview.height/2;
 }
 
+/**
+ * 根据传入的子视图计算出中心开始点
+ **/
 -(CGPoint)centerWithSubview:(UIView *)subview{
     return CGPointMake([self centerHorizontalWithSubview:subview],[self centerVerticalWithSubview:subview]);
 }
 
 /**
  *  居中增加子视图
- *
  */
 -(void)addSubviewToCenter:(UIView *)subview{
     CGRect rect = subview.frame;
@@ -185,7 +175,6 @@
     [self addSubview:subview];
 }
 
-
 @end
 
 /**
@@ -196,8 +185,6 @@
 
 /**
  *  当前视图在父视图中的位置
- *
- *  @return
  */
 -(int)getSubviewIndex
 {
@@ -239,8 +226,6 @@
 
 /**
  *  是否在最上面
- *
- *  @return
  */
 -(BOOL)isInFront
 {
@@ -249,8 +234,6 @@
 
 /**
  *  是否在最下面
- *
- *  @return
  */
 -(BOOL)isAtBack
 {
@@ -259,8 +242,6 @@
 
 /**
  *  交换层次
- *
- *  @param swapView 目标视图
  */
 -(void)swapDepthsWithView:(UIView*)swapView
 {
@@ -270,7 +251,7 @@
 /**
  *  清空所有子视图
  */
--(void)removeAllSubView{
+-(void)removeAllSubview{
     for(UIView *view in [self subviews])
     {
         [view removeFromSuperview];

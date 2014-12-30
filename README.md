@@ -15,12 +15,14 @@ UIView-Ext(视图扩展)
 
 ###2、视图居中相关
 ```Objective-C
+      根据传入的子视图计算出中心开始点
+      -(CGPoint)centerWithSubview:(UIView *)subview
+
       根据传入的子视图与当前视图计算出水平中心开始点
       -(CGFloat)centerHorizontalWithSubview:(UIView *)subview;   
 
       根据传入的子视图与当前视图计算出垂直中心开始点
       -(CGFloat)centerVerticalWithSubview:(UIView *)subview
-      -(CGPoint)centerWithSubview:(UIView *)subview
 
       居中增加子视图
       -(void)addSubviewToCenter:(UIView *)subview
@@ -31,9 +33,9 @@ UIView-Ext(视图扩展)
 ###3、边缘对齐增加视图
 ```Objective-C
       -(void)addSubviewToLeftAlign:(UIView *)subview
-      -(void)addSubViewToRightAlign:(UIView *)subview
-      -(void)addSubViewToTopAlign:(UIView *)subview
-      -(void)addSubViewToBottomAlign:(UIView *)subview
+      -(void)addSubviewToRightAlign:(UIView *)subview
+      -(void)addSubviewToTopAlign:(UIView *)subview
+      -(void)addSubviewToBottomAlign:(UIView *)subview
 ```
 
 ###4、视图层次相关
@@ -61,4 +63,7 @@ UIView-Ext(视图扩展)
       
       交换层次
       -(void)swapDepthsWithView:(UIView*)swapView
+
+      清空所有子视图
+      -(void)removeAllSubview;
 ```

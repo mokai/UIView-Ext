@@ -36,7 +36,6 @@
 
 /**
  *  距离屏幕
- *
  */
 - (CGFloat)screenTop;
 - (CGFloat)screenLeft;
@@ -44,25 +43,23 @@
 
 #pragma mark 视图居中相关
 /**
+ * 根据传入的子视图计算出中心开始点
+ **/
+-(CGPoint)centerWithSubview:(UIView *)subview;
+/**
  *  根据传入的子视图与当前视图计算出水平中心开始点
- *
  */
 -(CGFloat)centerHorizontalWithSubview:(UIView *)subview;
 /**
  *  根据传入的子视图与当前视图计算出垂直中心开始点
- *
  */
 -(CGFloat)centerVerticalWithSubview:(UIView *)subview;
--(CGPoint)centerWithSubview:(UIView *)subview;
-
 /**
  *  居中增加子视图
- *
  */
 -(void)addSubviewToCenter:(UIView *)subview;
 -(void)addSubviewToHorizontalCenter:(UIView *)subview;
 -(void)addSubviewToVerticalCenter:(UIView *)subview;
-
 
 @end
 
@@ -71,8 +68,6 @@
 @interface UIView (ZOrder)
 /**
  *  当前视图在父视图中的位置
- *
- *  @return
  */
 -(int)getSubviewIndex;
 /**
@@ -93,25 +88,19 @@
 -(void)sendOneLevelDown;
 /**
  *  是否在最上面
- *
- *  @return
  */
 -(BOOL)isInFront;
 /**
  *  是否在最下面
- *
- *  @return
  */
 -(BOOL)isAtBack;
 /**
  *  交换层次
- *
- *  @param swapView 目标视图
  */
 -(void)swapDepthsWithView:(UIView*)swapView;
 /**
  *  清空所有子视图
  */
--(void)removeAllSubView;
+-(void)removeAllSubview;
 @end
 
