@@ -4,36 +4,36 @@ UIView-Ext(视图扩展)
 ###1、位置frame扩展
 
       。top       
-      。left<br>
-      。right<br>
-      。bottom<br>
-      。size<br>
-      。width<br>
-      。height<br>
-      。screenTop       离屏幕的位置<br/>
-      。screenLeft<br>
+      。left
+      。right
+      。bottom
+      。size
+      。width
+      。height
+      。screenTop       离屏幕的位置
+      。screenLeft
 
 ###2、视图居中相关
 ```Objective-C
       根据传入的子视图与当前视图计算出水平中心开始点
-      -(CGFloat)centerHorizontalWithSubView:(UIView *)subView;   
+      -(CGFloat)centerHorizontalWithSubview:(UIView *)subview;   
 
       根据传入的子视图与当前视图计算出垂直中心开始点
-      -(CGFloat)centerVerticalWithSubView:(UIView *)subView
-      -(CGPoint)centerWithSubView:(UIView *)subView
+      -(CGFloat)centerVerticalWithSubview:(UIView *)subview
+      -(CGPoint)centerWithSubview:(UIView *)subview
 
       居中增加子视图
-      -(void)addSubViewToCenter:(UIView *)subView
-      -(void)addSubViewToHorizontalCenter:(UIView *)subView
-      -(void)addSubViewToVerticalCenter:(UIView *)subView
+      -(void)addSubviewToCenter:(UIView *)subview
+      -(void)addSubviewToHorizontalCenter:(UIView *)subview
+      -(void)addSubViewToVerticalCenter:(UIView *)subview
 ```
 
 ###3、边缘对齐增加视图
 ```Objective-C
-      -(void)addSubViewToLeftAlign:(UIView *)subView
-      -(void)addSubViewToRightAlign:(UIView *)subView
-      -(void)addSubViewToTopAlign:(UIView *)subView
-      -(void)addSubViewToBottomAlign:(UIView *)subView
+      -(void)addSubviewToLeftAlign:(UIView *)subview
+      -(void)addSubViewToRightAlign:(UIView *)subview
+      -(void)addSubViewToTopAlign:(UIView *)subview
+      -(void)addSubViewToBottomAlign:(UIView *)subview
 ```
 
 ###4、视图层次相关
