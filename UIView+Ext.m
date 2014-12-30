@@ -68,7 +68,6 @@
     self.frame = frame;
 }
 
-
 - (CGFloat)bottom {
     return self.frame.origin.y + self.frame.size.height;
 }
@@ -146,44 +145,44 @@
  *  根据传入的子视图与当前视图计算出水平中心开始点
  *
  */
--(CGFloat)centerHorizontalWithSubView:(UIView *)subView{
-    return self.width/2 - subView.width/2;
+-(CGFloat)centerHorizontalWithSubview:(UIView *)subview{
+    return self.width/2 - subview.width/2;
 }
 /**
  *  根据传入的子视图与当前视图计算出垂直中心开始点
  *
  */
--(CGFloat)centerVerticalWithSubView:(UIView *)subView{
-    return self.height/2 - subView.height/2;
+-(CGFloat)centerVerticalWithSubview:(UIView *)subview{
+    return self.height/2 - subview.height/2;
 }
 
--(CGPoint)centerWithSubView:(UIView *)subView{
-    return CGPointMake([self centerHorizontalWithSubView:subView],[self centerVerticalWithSubView:subView]);
+-(CGPoint)centerWithSubview:(UIView *)subview{
+    return CGPointMake([self centerHorizontalWithSubview:subview],[self centerVerticalWithSubview:subview]);
 }
 
 /**
  *  居中增加子视图
  *
  */
--(void)addSubViewToCenter:(UIView *)subView{
-    CGRect rect = subView.frame;
-    rect.origin = [self centerWithSubView:subView];
-    subView.frame = rect;
-    [self addSubview:subView];
+-(void)addSubviewToCenter:(UIView *)subview{
+    CGRect rect = subview.frame;
+    rect.origin = [self centerWithSubview:subview];
+    subview.frame = rect;
+    [self addSubview:subview];
 }
 
--(void)addSubViewToHorizontalCenter:(UIView *)subView{
-    CGRect rect = subView.frame;
-    rect.origin.x = [self centerHorizontalWithSubView:subView];
-    subView.frame = rect;
-    [self addSubview:subView];
+-(void)addSubviewToHorizontalCenter:(UIView *)subview{
+    CGRect rect = subview.frame;
+    rect.origin.x = [self centerHorizontalWithSubview:subview];
+    subview.frame = rect;
+    [self addSubview:subview];
 }
 
--(void)addSubViewToVerticalCenter:(UIView *)subView{
-    CGRect rect = subView.frame;
-    rect.origin.y = [self centerVerticalWithSubView:subView];
-    subView.frame = rect;
-    [self addSubview:subView];
+-(void)addSubviewToVerticalCenter:(UIView *)subview{
+    CGRect rect = subview.frame;
+    rect.origin.y = [self centerVerticalWithSubview:subview];
+    subview.frame = rect;
+    [self addSubview:subview];
 }
 
 
@@ -192,6 +191,7 @@
 /**
  *  视图层次相关
  */
+#pragma mark 视图层次相关
 @implementation UIView (ZOrder)
 
 /**

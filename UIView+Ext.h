@@ -13,60 +13,105 @@
  */
 @interface UIView (Position)
 
-#pragma mark location
-- (CGPoint)origin;//return self.frame.origin
+#pragma mark frame相关
+- (CGPoint)origin;
 - (void)setOrigin:(CGPoint)origin;
 - (CGSize)size;
 - (void)setSize:(CGSize)size;
 
-#pragma mark width and height
--(CGFloat)width;////return self.frame.size.width
+-(CGFloat)width;
 -(CGFloat)height;
 -(void)setWidth:(CGFloat)width;
 -(void)setHeight:(CGFloat)height;
 
-#pragma mark top and left
--(CGFloat)top;//return self.frame.origin.y
+-(CGFloat)top;
 -(CGFloat)left;
 -(void)setTop:(CGFloat)x;
 -(void)setLeft:(CGFloat)y;
 
-#pragma mark bottom and right
--(CGFloat)bottom;//return self.top+self.height
+-(CGFloat)bottom;
 -(void)setBottom:(CGFloat)buttom;
 -(CGFloat)right;
--(void)setRight:(CGFloat)right;//return self.left+self.width
+-(void)setRight:(CGFloat)right;
 
-#pragma mark The distance from the starting point of the screen
+/**
+ *  距离屏幕
+ *
+ */
 - (CGFloat)screenTop;
 - (CGFloat)screenLeft;
 - (CGRect)screenFrame;
 
-#pragma mark view center
--(CGFloat)centerHorizontalWithSubView:(UIView *)subView;//According to the width of the View to calculate the horizontal center starting point in the self
--(CGFloat)centerVerticalWithSubView:(UIView *)subView;
--(CGPoint)centerWithSubView:(UIView *)subView;
+#pragma mark 视图居中相关
+/**
+ *  根据传入的子视图与当前视图计算出水平中心开始点
+ *
+ */
+-(CGFloat)centerHorizontalWithSubview:(UIView *)subview;
+/**
+ *  根据传入的子视图与当前视图计算出垂直中心开始点
+ *
+ */
+-(CGFloat)centerVerticalWithSubview:(UIView *)subview;
+-(CGPoint)centerWithSubview:(UIView *)subview;
 
-#pragma mark add view to center
--(void)addSubViewToCenter:(UIView *)subView;//Increase the View to the center of the self
--(void)addSubViewToHorizontalCenter:(UIView *)subView;
--(void)addSubViewToVerticalCenter:(UIView *)subView;
+/**
+ *  居中增加子视图
+ *
+ */
+-(void)addSubviewToCenter:(UIView *)subview;
+-(void)addSubviewToHorizontalCenter:(UIView *)subview;
+-(void)addSubviewToVerticalCenter:(UIView *)subview;
 
 
 @end
 
-/**
- *  视图层次扩展
- */
+
+#pragma mark 视图层次相关
 @interface UIView (ZOrder)
+/**
+ *  当前视图在父视图中的位置
+ *
+ *  @return
+ */
 -(int)getSubviewIndex;
+/**
+ *  将视图置于父视图最上面
+ */
 -(void)bringToFront;
+/**
+ *  将视图置于父视图最下面
+ */
 -(void)sendToBack;
+/**
+ *  视图层次上移一层
+ */
 -(void)bringOneLevelUp;
+/**
+ *  视图层次下移一层
+ */
 -(void)sendOneLevelDown;
+/**
+ *  是否在最上面
+ *
+ *  @return
+ */
 -(BOOL)isInFront;
+/**
+ *  是否在最下面
+ *
+ *  @return
+ */
 -(BOOL)isAtBack;
+/**
+ *  交换层次
+ *
+ *  @param swapView 目标视图
+ */
 -(void)swapDepthsWithView:(UIView*)swapView;
--(void)removeAllSubView;//清空所有子视图
+/**
+ *  清空所有子视图
+ */
+-(void)removeAllSubView;
 @end
 
